@@ -19,7 +19,7 @@ public class userInterview
             
         }catch (IOException e) {
             
-            System.out.println("IOException - "+ e);
+            System.out.println("IOException - " + e);
             
         }
         return inputLine;
