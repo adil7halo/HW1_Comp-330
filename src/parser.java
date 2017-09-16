@@ -3,8 +3,12 @@ package notesyntax;
 import java.util.*;
 import java.io.*;
 
-public class parser {
+	public LinkedList<String> UrlList = new LinkedList<String>();
+	public LinkedList<String> TopicsList = new LinkedList<String>();
+	public LinkedList<String> HashesList = new LinkedList<String>(); 
     
+public class parser {
+	
     public Boolean FindTopic(String note){
 			int i=0;
 			String topic;
