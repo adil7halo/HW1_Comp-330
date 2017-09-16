@@ -4,8 +4,9 @@ import java.util.*;
 import java.io.*;
 
 	public LinkedList<String> UrlList = new LinkedList<String>();
-	public LinkedList<String> TopicsList = new LinkedList<String>();
 	public LinkedList<String> HashesList = new LinkedList<String>(); 
+	public LinkedList<String> TopicsList = new LinkedList<String>();
+
     
 public class parser {
 	
@@ -30,4 +31,24 @@ public class parser {
 		    return false;
 		 }
 		 
+		 public Boolean FindHash(String note){
+	   	String hashtag = note;
+		int i=0;
+		do {
+		    if (note.contains('#@' || 'http://#' || '#http://'|| '@#')) {		    	
+			     break;
+			}
+			if (note.contains('#') {
+		        int indexOfHash = note.indexOf('#');
+		        int endPoint = (note.indexOf(' ', indexOfHash) != -1) ?
+			     	note.indexOf(' ', indexOfHash) : note.length();
+			        hashtag = note.substring(indexOfHash, endPoint); 
+			        HashesList.set(i, hashtag); 
+			        return true;
+			}
+			i++;
+	     } while (i<HashesList.size());
+		return false;
+		
+		
 }
