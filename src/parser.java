@@ -50,5 +50,24 @@ public class parser {
 	     } while (i<HashesList.size());
 		return false;
 		
+		public Boolean FindUrl(String note){
+		String url=note;
+		int i=0;
+		do {         
+		    if (note.contains('htttp://@' || 'http://#' || '#http://'|| '@htttp://')) {		    	
+		         break;
+		    }
+		    if (note.contains('http://')) {
+		        int indexOfUrl = note.indexOf('http://');
+		        int endPoint = (note.indexOf(' ', indexOfHttp) != -1) ?
+	        	note.indexOf(' ', indexOfUrl) : note.length();
+		        url = note.substring(indexOfUrl, endPoint);  
+		        UrlList.set(i, url); 
+		        return true;		
+		        }
+		     i++;
+	      } while (i<UrlList.size());
+	       return false;
+	 }
 		
 }
