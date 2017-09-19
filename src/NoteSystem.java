@@ -64,3 +64,36 @@ public class NoteSystem {
       }
     }
   }
+  // Generate report of notes containing keyword/mention
+  public void report5(String term) {
+    System.out.println("Notes containing keyword/mention "+term+":");
+    for (String noteName: notes.keySet()) {
+      Note note = notes.get(noteName);
+      if (note.search(term)) {
+        System.out.println(noteName);
+      }
+    }
+  }
+  
+  // Generate report of notes in topological order
+  public void report6() {
+    System.out.println("Notes in topological order:");
+    for (String noteName: notes.keySet()) {
+      System.out.println(noteName);
+    }
+  }
+  
+  // Display menu
+  public static void displayMenu() {
+    System.out.println("Generate report:");
+    System.out.println("1. Report of all notes containing one or more mentions");
+    System.out.println("2. Report of all notes, organized by mention");
+    System.out.println("3. Report of all notes containing one or more keywords");
+    System.out.println("4. Report of all notes, organized by keyword");
+    System.out.println("5. Report of all notes by selected mention/keyword");
+    System.out.println("6. Report of all notes in topological order");
+    System.out.println("7. Exit");
+  }
+  
+  
+  
