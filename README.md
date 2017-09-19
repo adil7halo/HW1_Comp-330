@@ -20,7 +20,7 @@ The Project is in 2 classes. NoteSystem.java contains the main system which load
 
 Note.java contains a Note class which loads a File object.
 
-Once the NoteSystem.java and Note.java files are open, run the program, choose a number from the menu and generate the reports.
+Once the NoteSystem.java and Note.java files are open, run the program, choose a number from the menu and generate the reports. There are already Identifiers, Mentions, and Keywords given in the .txt files.
 ________________________________________________________________________________________________________________
 
 Hw1 Pair Assignment 
