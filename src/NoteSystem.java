@@ -64,6 +64,7 @@ public class NoteSystem {
       }
     }
   }
+  
   // Generate report of notes containing keyword/mention
   public void report5(String term) {
     System.out.println("Notes containing keyword/mention "+term+":");
@@ -95,7 +96,7 @@ public class NoteSystem {
     System.out.println("7. Exit");
   }
   
-    // Main method for execution
+  // Main method for execution
   public static void main(String[] args) {
     NoteSystem notes = new NoteSystem(".");
     Scanner s = new Scanner(System.in);
@@ -127,4 +128,4 @@ public class NoteSystem {
   
   
 }
-  
+

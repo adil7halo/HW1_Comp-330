@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.regex.*;
@@ -35,7 +36,7 @@ public class Note {
     Pattern topicPattern = Pattern.compile("!\\w+");
     Pattern linkPattern = Pattern.compile("^\\w+");
     try {
-      List<String> lines = Files.readAllLines(Paths.get(path));
+      List<String> lines = Files.readAllLines(Paths.get(path),StandardCharsets.UTF_8);
       for (String line: lines) {
         Matcher matcher = mentionPattern.matcher(line);
         while (matcher.find())
