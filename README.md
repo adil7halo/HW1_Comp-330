@@ -1,6 +1,6 @@
 # HW1_Comp-330
 
-9/19 - Did a lot of big changes to the code, and added some .txt files.
+9/19 - Did a lot of big changes to the code, and added some .txt files. 
 
 9/18 - Discussed with Raed on how to reformat some of the hw, code changes.
 
@@ -11,7 +11,17 @@
 9/14 - Removed some files and added booleans.
 
 9/12 - Initial setup of c9, and making some basic files.
-______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________________
+
+Instructions to Run Code: 
+
+The Project is in 2 classes. NoteSystem.java contains the main system which loads all the notes (txt files in the present directory) and allows the user to generate different reports through a menu.
+
+Note.java contains a Note class which loads a File object.
+
+Once the NoteSystem.java and Note.java files are open, run the program, choose a number from the menu and generate the reports.
+________________________________________________________________________________________________________________
 
 Hw1 Pair Assignment 
 
