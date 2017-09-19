@@ -29,3 +29,41 @@ public class Note {
   }
   
 }
+  // Method to parse Note file
+  private void parse() {
+    Pattern mentionPattern = Pattern.compile("@\\w+");
+    Pattern keywordPattern = Pattern.compile("#\\w+");
+    Pattern topicPattern = Pattern.compile("!\\w+");
+    Pattern linkPattern = Pattern.compile("^\\w+");
+    try {
+      List<String> lines = Files.readAllLines(Paths.get(path));
+      for (String line: lines) {
+        Matcher matcher = mentionPattern.matcher(line);
+        while (matcher.find())
+        {
+          mentions.add(matcher.group().substring(1));
+        }
+        matcher = keywordPattern.matcher(line);
+        while (matcher.find())
+        {
+          keywords.add(matcher.group().substring(1));
+        }
+        if (identifier == null) {
+          matcher = topicPattern.matcher(line);
+          while (matcher.find())
+          {
+            identifier = matcher.group().substring(1);
+            break;
+          }
+        }
+        matcher = linkPattern.matcher(line);
+        while (matcher.find())
+        {
+          links.add(matcher.group().substring(1));
+        }
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  
