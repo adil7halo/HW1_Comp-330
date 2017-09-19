@@ -1,14 +1,12 @@
-package notesyntax;
-
-import java.util.*;
 import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.regex.*;
 
-	public LinkedList<String> UrlList = new LinkedList<String>();
-	public LinkedList<String> HashesList = new LinkedList<String>(); 
-	public LinkedList<String> TopicsList = new LinkedList<String>();
-
-    
-public class parser {
+/*
+ *  Note class
+ */
+public class Note {
 	
     public Boolean FindTopic(String note){
 			int i=0;
