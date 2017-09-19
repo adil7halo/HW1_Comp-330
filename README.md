@@ -1,4 +1,7 @@
 # HW1_Comp-330
+
+9/19 - Did a lot of big changes to the code, and added some .txt files.
+
 9/18 - Discussed with Raed on how to reformat some of the hw, code changes.
 
 9/17 - Attempted to configure how to do URL's using Boolean.
