@@ -1,4 +1,12 @@
 # HW1_Comp-330
+
+
+9/17 - Attempted to configure how to do URL's using Boolean
+9/16 - More booleans, worked with Raed on how to move forward with the hw, and exchanged some notes
+9/14 - Removed some files and added booleans
+9/12 - Initial setup of c9, and making some basic files.
+______________________________________________________________________________________________________
+
 Hw1 Pair Assignment 
 
 
