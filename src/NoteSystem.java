@@ -95,5 +95,36 @@ public class NoteSystem {
     System.out.println("7. Exit");
   }
   
+    // Main method for execution
+  public static void main(String[] args) {
+    NoteSystem notes = new NoteSystem(".");
+    Scanner s = new Scanner(System.in);
+    while (true) {
+      displayMenu();
+      System.out.print("Choice: ");
+      String input = s.nextLine();
+      if (input.equals("1")) {
+        notes.report1();
+      } else if (input.equals("2")) {
+        notes.report2();
+      } else if (input.equals("3")) {
+        notes.report3();
+      } else if (input.equals("4")) {
+        notes.report4();
+      } else if (input.equals("5")) {
+        System.out.print("Enter mention/keyword to search: ");
+        String term = s.nextLine();
+        notes.report5(term);
+      } else if (input.equals("6")) {
+        notes.report6();
+      } else if (input.equals("7")) {
+        return;
+      } else {
+        System.out.println("Error: Invalid input.");
+      }
+    }
+  }
   
+  
+}
   
