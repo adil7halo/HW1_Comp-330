@@ -16,6 +16,7 @@ public class Note {
   private ArrayList<String> keywords;
   private String identifier;
   private ArrayList<String> links;
+  private ArrayList<String> urls;
   
   // Constructor
   public Note(File file) {
@@ -23,6 +24,7 @@ public class Note {
     keywords = new ArrayList<String>();
     identifier = null;
     links = new ArrayList<String>();
+    urls = new ArrayList<String>();
     this.name = file.getName();
     this.path = file.getPath();
     this.file = file;
@@ -35,6 +37,11 @@ public class Note {
     Pattern keywordPattern = Pattern.compile("#\\w+");
     Pattern topicPattern = Pattern.compile("!\\w+");
     Pattern linkPattern = Pattern.compile("^\\w+");
+    Pattern urlPattern =  Pattern.compile(
+        "(?:^|[\\W])((ht|f)tp(s?):\\/\\/|www\\.)"
+                + "(([\\w\\-]+\\.){1,}?([\\w\\-.~]+\\/?)*"
+                + "[\\p{Alnum}.,%_=?&#\\-+()\\[\\]\\*$~@!:/{};']*)",
+        Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
     try {
       List<String> lines = Files.readAllLines(Paths.get(path),StandardCharsets.UTF_8);
       for (String line: lines) {
@@ -60,6 +67,11 @@ public class Note {
         while (matcher.find())
         {
           links.add(matcher.group().substring(1));
+        }
+        matcher = urlPattern.matcher(line);
+        while (matcher.find())
+        {
+          urls.add(matcher.group());
         }
       }
     } catch (Exception e) {
