@@ -1,5 +1,7 @@
 # HW1_Comp-330
 
+9/22 - Added more .txt files
+
 9/20 - Got URLs working, Raed and I are working on trying to add more .txt files.
 
 9/19 - Did a lot of big changes to the code, and added some .txt files. 
